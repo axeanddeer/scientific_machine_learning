@@ -2,7 +2,7 @@
 
 ## Repository Link
 
-[https://github.com/your_username/your_project_name]
+[https://github.com/axeanddeer/scientific_machine_learning/tree/main]
 
 ## Description
 
@@ -10,7 +10,7 @@
 
 ### Task Type
 
-[Image Classification / Chatbot / Regression / Clustering / Other]
+[Regression]
 
 ### Results Summary
 
