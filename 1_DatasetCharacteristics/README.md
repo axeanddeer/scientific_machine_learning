@@ -5,27 +5,31 @@
 ## Dataset Information
 
 ### Dataset Source
-- **Dataset Link:** [Provide a direct link to your dataset. If the dataset is private, explain the reason and provide contact information for the dataset owner]
-- **Dataset Owner/Contact:** [If applicable, provide contact information for private datasets]
+- **Dataset Link:** Private research dataset (not publicly available). Contains proprietary microstructure profiler measurements from GEOMAR field experiments. Contact Florian Schütte (fschuette@geomar.de) for access.
+- **Dataset Owner/Contact:** Prof. Dr. Florian Schütte, GEOMAR Helmholtz Centre for Ocean Research Kiel, Physical Oceanography group (fschuette@geomar.de, Tel: +49 431 600 4495).
 
 ### Dataset Characteristics
-- **Number of Observations:** [Total number of samples/records in your dataset. For time series data, also specify the temporal resolution (e.g., daily, hourly, etc.)]
-- **Number of Features:** [Total number of features in your dataset]
+- **Number of Observations:** 1,165,844 processed datapoints from 4021 full-depth ocean profiles (29 field experiments, 0.7m vertical resolution).
+- **Number of Features:** 9 input features derived from hydrographic profiles and bathymetry.
 
 ### Target Variable/Label
-- **Label Name:** [Name of the target variable/column]
-- **Label Type:** [Classification/Regression/Clustering/Other]
-- **Label Description:** [What does this label represent? What is the prediction task?]
-- **Label Values:** [For classification: list of classes and their meanings. For regression: range of values. For other tasks: describe the label structure]
-- **Label Distribution:** [Brief description of class balance for classification or value distribution for regression]
+- **Label Name:** EPS
+- **Label Type:** Regression
+- **Label Description:** Turbulent kinetic energy dissipation rate per unit mass (ε in W/kg). Prediction task: estimate ocean turbulence intensity from CTD/hydrographic parameters for mixing parameterization.
+- **Label Values:** Positive real numbers, typically 10⁻¹⁰ to 10⁻⁴ W/kg (log-transformed for modeling).
+- **Label Distribution:** Log-skew-normal distribution (universal in global ocean turbulence), skewed toward low values in stratified regions.
 
 ### Feature Description
-[Provide a brief description of each feature or group of features in your dataset. If you have many features, group them logically and describe each group. Include information about data types, ranges, and what each feature represents.]
+- **Feature 1 (N2):** Squared buoyancy frequency (N² = -g/ρ·dρ/dz), float, measures ocean stratification strength (s⁻²).
+- **Feature 2 (LN2):** Natural logarithm of N2, float, added for numerical stability in log-space neural network training.
+- **Feature 3 (S):** Salinity from CTD measurements, float (PSU), 30-40 PSU range.
+- **Feature 4 (T):** Potential temperature from CTD, float (°C), -2 to 30°C range.
+- **Feature 5 (Z):** Normalized depth (z ∈ [0,1]), float (m), from surface to seafloor.
+- **Feature 6 (dSdz):** Vertical salinity gradient, float (PSU/m), computed from profiles.
+- **Feature 7 (dTdz):** Vertical temperature gradient, float (°C/m), computed from profiles.
+- **Feature 8 (hab):** Habitat/bottom depth from GEBCO bathymetry grids, float (m), seafloor depth proxy.
+- **Feature 9 (lat):** Latitude, float (degrees, -90 to 90), captures regional variability in turbulence.
 
-**Example format:**
-- **Feature 1 (feature_name):** [Description of what this feature represents, data type, and any relevant details]
-- **Feature 2 (feature_name):** [Description of what this feature represents, data type, and any relevant details]
-- **Feature Group (group_name):** [Description of a group of related features]
 
 ## Exploratory Data Analysis
 
