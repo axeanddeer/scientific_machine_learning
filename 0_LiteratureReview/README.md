@@ -1,5 +1,3 @@
-![](./media/image1.emf){width="6.268055555555556in" height="8.870138888888889in"}
-
 **Source 1: Physics-informed deep-learning parameterization of ocean vertical mixing improves climate simulations (Zhu et al., 2022):**
 
 [[**https://academic.oup.com/nsr/article/9/8/nwac044/6544687?utm_source=chatgpt.com**](https://academic.oup.com/nsr/article/9/8/nwac044/6544687?utm_source=chatgpt.com)](https://academic.oup.com/nsr/article/9/8/nwac044/6544687?utm_source=chatgpt.com)
@@ -40,7 +38,7 @@
 
 **Relation to the Project**: Direct methodological analogue if aim is supervised learning of ε from microstructure datasets.
 
-**Source 3: Probabilistic neural networks for predicting energy dissipation rates in stratified turbulent flows* *(Lewin et al., 2021)**
+**Source 3: Probabilistic neural networks for predicting energy dissipation rates in stratified turbulent flows (Lewin et al., 2021)**
 
 <https://arxiv.org/abs/2112.01113>
 
